@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/rgPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPriority">
+
+        <RadioButton
+            android:id="@+id/btnHighPriority"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rb1_selector"
+            android:button="@android:color/transparent"
+            android:textAlignment="center"
+            android:textColor="@drawable/text_color"
+            android:text="High"
+            app:layout_constraintEnd_toStartOf="@+id/btnMediumPriority"
+            app:layout_constraintTop_toBottomOf="@+id/tvPriority" />
+
+        <RadioButton
+            android:id="@+id/btnMediumPriority"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rb2_selector"
+            android:button="@android:color/transparent"
+            android:textAlignment="center"
+            android:textColor="@drawable/text_color"
+            android:text="Medium"
+            app:layout_constraintEnd_toStartOf="@+id/btnLowPriority"
+            app:layout_constraintTop_toBottomOf="@+id/tvPriority" />
+
+        <RadioButton
+            android:id="@+id/btnLowPriority"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rb3_selector"
+            android:button="@android:color/transparent"
+            android:textAlignment="center"
+            android:textColor="@drawable/text_color"
+            android:text="Low"
+            app:layout_constraintEnd_toStartOf="@+id/btnOfNoPriority"
+            app:layout_constraintTop_toBottomOf="@+id/tvPriority" />
+
+        <RadioButton
+            android:id="@+id/btnNoPriority"
+            android:checked="true"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rb4_selector"
+            android:button="@android:color/transparent"
+            android:textAlignment="center"
+            android:text="No priority"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPriority" />
+    </RadioGroup>
+    <Button
+        android:id="@+id/btnDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DateTime"
+        app:cornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgNotifications" />
+    <TextView
+        android:id="@+id/tvTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time or deadline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTask" />
+
+    <TextView
+        android:id="@+id/tvPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a priority of it"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDateTime" />
+
+    <TextView
+        android:id="@+id/tvNotifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you want to receive notifications?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgPriority" />
+    <EditText
+        android:id="@+id/etTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter task or event"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTask" />
+
+    <RadioGroup
+        android:id="@+id/rgNotifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotifications">
+
+        <RadioButton
+            android:id="@+id/rbNoNotifications"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="no notifications"
+            android:buttonTint="@color/gray"/>
+
+        <RadioButton
+            android:id="@+id/rbEveryDayNotifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="every day"
+            android:buttonTint="@color/red_malina"/>
+
+        <RadioButton
+            android:id="@+id/rbEveryOtherDayNotifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="every other day"
+            android:buttonTint="@color/yellow"/>
+
+        <RadioButton
+            android:id="@+id/rb3DayBeforeNotifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 days before"
+            android:buttonTint="@color/lime"/>
+
+        <RadioButton
+            android:id="@+id/rb1DayBeforeNotifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 day before"
+            android:buttonTint="@color/purple_200"/>
+
+        <RadioButton
+            android:id="@+id/rb1HourBeforeNotifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 hour before"
+            android:buttonTint="@color/purple_700"/>
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
